@@ -1,4 +1,3 @@
-
 # Predicting Stx Profiles and Phage Types of Shiga-toxigenic *Escherichia coli* Using k-mer-based Machine Learning
 
 Code accompanying my summer project in Bioinformatics at the University of Bath.
