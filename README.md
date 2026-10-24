@@ -36,72 +36,72 @@ The analysis investigated:
 ├── README.md
 ├── requirements.txt
 └── scripts/
-    ├── tuned_pt_extra_trees.py
-    ├── tuned_stx_linear_svc.py
     ├── baseline_pt_linear_svc.py
     ├── baseline_pt_log_reg.py
     ├── baseline_pt_rf.py
     ├── baseline_stx_linear_svc.py
     ├── baseline_stx_log_reg.py
     ├── baseline_stx_rf.py
-    └── data_cleaning.py
+    ├── data_cleaning.py
+    ├── tuned_pt_extra_trees.py
+    └── tuned_stx_linear_svc.py
 ```
 
 ## Analysis workflow
 
-### 01 — Tuned Extra Trees Classifier (hyperparameter tuning and feature selection) for PT prediction
-
-`tuned_pt_extra_trees.py`
-
-This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and mutual information improved predictive performance for this particular task.
-
-### 02 — Tuned LinearSVC (hyperparameter tuning and feature selection) for Stx prediction
-
-`tuned_stx_linear_svc.py`
-
-This script implements a machine learning pipeline using a tuned LinearSVC to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and the ANOVA F-test (f_classif) improved predictive performance for this particular task.
-
-### 03 — Baseline LinearSVC (no hyperparameter tuning or feature selection) for PT prediction
+### 01 — Baseline LinearSVC (no hyperparameter tuning or feature selection) for PT prediction
 
 `baseline_pt_linear_svc.py`
 
 This script implements a machine learning pipeline using LinearSVC to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 04 — Baseline Logistic Regression (no hyperparameter tuning or feature selection) for PT prediction
+### 02 — Baseline Logistic Regression (no hyperparameter tuning or feature selection) for PT prediction
 
 `baseline_pt_log_reg.py`
 
 This script implements a machine learning pipeline using Logistic Regression to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 05 — Baseline Random Forest Classifier (no hyperparameter tuning or feature selection) for PT prediction
+### 03 — Baseline Random Forest Classifier (no hyperparameter tuning or feature selection) for PT prediction
 
 `baseline_pt_rf.py`
 
 This script implements a machine learning pipeline using a Random Forest Classifier to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 06 — Baseline LinearSVC (no hyperparameter tuning or feature selection) for Stx prediction
+### 04 — Baseline LinearSVC (no hyperparameter tuning or feature selection) for Stx prediction
 
 `baseline_stx_linear_svc.py`
 
 This script implements a machine learning pipeline using LinearSVC to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 07 — Baseline Logistic Regression (no hyperparameter tuning or feature selection) for Stx prediction
+### 05 — Baseline Logistic Regression (no hyperparameter tuning or feature selection) for Stx prediction
 
 `baseline_stx_log_reg.py`
 
 This script implements a machine learning pipeline using Logistic Regression to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 08 — Baseline Random Forest Classifier (no hyperparameter tuning or feature selection) for Stx prediction
+### 06 — Baseline Random Forest Classifier (no hyperparameter tuning or feature selection) for Stx prediction
 
 `baseline_stx_rf.py`
 
 This script implements a machine learning pipeline using a Random Forest Classifier to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix.
 
-### 09 — Cleaning the dataset
+### 07 — Cleaning the dataset
 
 `data_cleaning.py`
 
 This script preprocesses the datasets by removing unnecessary rows and columns, then saves the cleaned data in pickle and CSV formats for analysis.
+
+### 08 — Tuned Extra Trees Classifier (hyperparameter tuning and feature selection) for PT prediction
+
+`tuned_pt_extra_trees.py`
+
+This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and mutual information improved predictive performance for this particular task.
+
+### 09 — Tuned LinearSVC (hyperparameter tuning and feature selection) for Stx prediction
+
+`tuned_stx_linear_svc.py`
+
+This script implements a machine learning pipeline using a tuned LinearSVC to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and the ANOVA F-test (f_classif) improved predictive performance for this particular task.
 
 ## Model evaluation
 
