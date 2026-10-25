@@ -156,7 +156,8 @@ BSc Mathematics
 
 University of Bath
 
-Supervisor:
+
+Supervised by:
 
 Dr Lauren Cowley
 
