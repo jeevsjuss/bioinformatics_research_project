@@ -155,3 +155,9 @@ Jeevan Singh Juss
 BSc Mathematics
 
 University of Bath
+
+Supervisor:
+
+Dr Lauren Cowley
+
+University of Bath
