@@ -34,7 +34,7 @@ The analysis investigated:
 .
 ├── README.md
 ├── requirements.txt
-└── scripts/
+└── models/
     ├── baseline_pt_linear_svc.py
     ├── baseline_pt_log_reg.py
     ├── baseline_pt_rf.py
@@ -42,9 +42,17 @@ The analysis investigated:
     ├── baseline_stx_log_reg.py
     ├── baseline_stx_rf.py
     ├── data_cleaning.py
-    ├── tuned_pt_extra_trees.py
-    └── tuned_stx_linear_svc.py
+    ├── model_io.py
+    ├── tuned_pt_random_forest.py
+    └── tuned_stx_extra_trees.py.py
 ```
+
+## Trained Models & Availability
+
+Pre-trained, pickled model artifacts (`.pkl` / `.pickle`) produced during this project are archived and openly available on Zenodo:
+
+- **Zenodo Deposit:** [https://zenodo.org/records/23950196](https://zenodo.org/records/23950196)
+- **Contents:** Trained estimators, selected feature subsets, and model parameters for both the tuned Random Forest PT model and tuned Extra Trees Stx model.
 
 ## Analysis workflow
 
@@ -90,17 +98,23 @@ This script implements a machine learning pipeline using a Random Forest Classif
 
 This script preprocesses the datasets by removing unnecessary rows and columns, then saves the cleaned data in pickle and CSV formats for analysis.
 
-### 08 — Tuned Extra Trees Classifier (hyperparameter tuning and feature selection) for PT prediction
+### 08 — Functions for saving the pipelines
 
-`tuned_pt_extra_trees.py`
+`model_io.py`
 
-This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and mutual information improved predictive performance for this particular task.
+This script provides functions to securely save and load fitted scikit-learn pipelines as pickle (`.pkl`) bundles. It handles the alignment of k-mer matrices to ensure new data is automatically matched to the features the model was trained on and decodes predictions back to their original labels. The script also implements security and reproducibility checks, including package version logging, missing feature warnings, and SHA-256 checksum verification to detect file corruption or tampering.
 
-### 09 — Tuned LinearSVC (hyperparameter tuning and feature selection) for Stx prediction
+### 09 — Tuned Random Forest Classifier (hyperparameter tuning and feature selection) for PT prediction
 
-`tuned_stx_linear_svc.py`
+`tuned_pt_random_forest.py`
 
-This script implements a machine learning pipeline using a tuned LinearSVC to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and the ANOVA F-test (f_classif) improved predictive performance for this particular task.
+This script implements a machine learning pipeline using a tuned Random Forest Classifier to predict 'PT' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, binarisation of k-mer features and feature selection using variance thresholding and the ANOVA F-test (f_classif) improved predictive performance for this particular task.
+
+### 10 — Tuned Extra Trees Classifier (hyperparameter tuning and feature selection) for Stx prediction
+
+`tuned_stx_extra_trees.py`
+
+This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, feature selection using SelectKBest with a Random Forest estimator improved predictive performance for this particular task.
 
 ## Model evaluation
 
