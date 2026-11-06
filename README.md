@@ -34,7 +34,7 @@ The analysis investigated:
 .
 ├── README.md
 ├── requirements.txt
-└── models/
+└── scripts/
     ├── baseline_pt_linear_svc.py
     ├── baseline_pt_log_reg.py
     ├── baseline_pt_rf.py
