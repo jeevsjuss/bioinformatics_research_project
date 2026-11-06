@@ -1,8 +1,7 @@
-numpy
-pandas
-matplotlib
-scikit-learn
-imbalanced-learn
-seaborn
-boruta
-xgboost
+NumPy: 2.4.6
+Pandas: 3.0.5
+XGBoost: 3.4.1
+Seaborn: 0.13.2
+Matplotlib: 3.11.1
+Scikit-learn: 1.9.1
+Imbalanced-learn: 0.14.2
