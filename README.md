@@ -51,7 +51,7 @@ The analysis investigated:
 
 Pre-trained, pickled model artifacts (`.pkl` / `.pickle`) produced during this project are archived and openly available on Zenodo:
 
-- **Zenodo Deposit:** [https://zenodo.org/records/23950196](https://zenodo.org/records/23950196)
+- **Zenodo Deposit:** [https://zenodo.org/records/23950196](https://doi.org/10.5281/zenodo.23950196)
 - **Contents:** Trained estimators, selected feature subsets, and model parameters for both the tuned Random Forest PT model and tuned Extra Trees Stx model.
 
 ## Analysis workflow
@@ -114,7 +114,7 @@ This script implements a machine learning pipeline using a tuned Random Forest C
 
 `tuned_stx_extra_trees.py`
 
-This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, feature selection using SelectKBest with a Random Forest estimator improved predictive performance for this particular task.
+This script implements a machine learning pipeline using a tuned Extra Trees Classifier to predict 'Stx' labels from training and test datasets. It includes cross-validation, model fitting, and evaluation metrics such as F1 score and confusion matrix. In addition to hyperparameter tuning, feature selection using SelectFromModel with a Random Forest estimator improved predictive performance for this particular task.
 
 ## Model evaluation
 
