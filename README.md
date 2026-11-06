@@ -170,9 +170,13 @@ BSc Mathematics
 
 University of Bath
 
+Email: jeevsjuss@gmail.com
+
 
 Supervised by:
 
 Dr Lauren Cowley
 
 University of Bath
+
+Email: L.Cowley@bath.ac.uk
