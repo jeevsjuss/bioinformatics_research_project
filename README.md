@@ -32,6 +32,7 @@ The analysis investigated:
 
 ```text
 .
+├── LICENSE
 ├── README.md
 ├── requirements.txt
 └── scripts/
@@ -44,7 +45,7 @@ The analysis investigated:
     ├── data_cleaning.py
     ├── model_io.py
     ├── tuned_pt_random_forest.py
-    └── tuned_stx_extra_trees.py.py
+    └── tuned_stx_extra_trees.py
 ```
 
 ## Trained Models & Availability
@@ -180,3 +181,8 @@ Dr Lauren Cowley
 University of Bath
 
 Email: L.Cowley@bath.ac.uk
+
+
+## License
+
+This project and its associated pre-trained models are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
